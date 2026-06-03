@@ -60,6 +60,8 @@
       flex-direction: column;
       gap: 10px;
       transition: border-color 0.2s, transform 0.2s;
+      position: relative;
+      cursor: pointer;
     }
 
     .card:hover {
@@ -390,5 +392,14 @@
   </section>
 
 </div>
+<script>
+  document.querySelectorAll('.card').forEach(card => {
+    const repo = card.querySelector('.btn-repo');
+    if (!repo) return;
+    card.addEventListener('click', e => {
+      if (!e.target.closest('a')) window.open(repo.href, '_blank');
+    });
+  });
+</script>
 </body>
 </html>
