@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos — Yago</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0d1117;
+      color: #e6edf3;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      min-height: 100vh;
+      padding: 60px 24px 80px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+
+    header p {
+      margin-top: 10px;
+      color: #8b949e;
+      font-size: 1rem;
+    }
+
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #8b949e;
+      margin-bottom: 20px;
+      padding-left: 4px;
+    }
+
+    section { margin-bottom: 48px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .card:hover {
+      border-color: #58a6ff;
+      transform: translateY(-2px);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .card-emoji {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    .card-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #58a6ff;
+    }
+
+    .card-desc {
+      font-size: 0.875rem;
+      color: #8b949e;
+      line-height: 1.5;
+      flex: 1;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 20px;
+      border: 1px solid;
+    }
+
+    .tag-android  { color: #3fb950; border-color: #3fb95055; background: #3fb95011; }
+    .tag-web      { color: #58a6ff; border-color: #58a6ff55; background: #58a6ff11; }
+    .tag-tool     { color: #d2a8ff; border-color: #d2a8ff55; background: #d2a8ff11; }
+    .tag-music    { color: #ffa657; border-color: #ffa65755; background: #ffa65711; }
+    .tag-flutter  { color: #54aeff; border-color: #54aeff55; background: #54aeff11; }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .btn {
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 5px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: opacity 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .btn:hover { opacity: 0.8; }
+
+    .btn-repo { background: #21262d; color: #e6edf3; border: 1px solid #30363d; }
+    .btn-web  { background: #1f6feb; color: #fff; border: 1px solid #1f6feb; }
+    .btn-apk  { background: #238636; color: #fff; border: 1px solid #238636; }
+
+    .max-w {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+<div class="max-w">
+
+  <header>
+    <h1>Proyectos</h1>
+    <p>Apps y webs que he ido haciendo — <a href="https://github.com/yagoEstudios" style="color:#58a6ff;text-decoration:none;">@yagoEstudios</a></p>
+  </header>
+
+  <!-- ANDROID -->
+  <section>
+    <p class="section-title">Apps Android</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-top">
+          <span class="card-emoji">🎵</span>
+          <span class="card-name">Afinador</span>
+        </div>
+        <p class="card-desc">Afinador de instrumentos en tiempo real. Detecta la nota que estás tocando usando el micrófono del móvil.</p>
+        <div class="tags">
+          <span class="tag tag-android">Android</span>
+          <span class="tag tag-flutter">Flutter</span>
+          <span class="tag tag-music">Música</span>
+        </div>
+        <div class="links">
+          <a class="btn btn-repo" href="https://github.com/yagoEstudios/afinador">⌥ Repo</a>
+          <a class="btn btn-apk" href="https://github.com/yagoEstudios/afinador/releases">⬇ APK</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <span class="card-emoji">🎙️</span>
+          <span class="card-name">Grabadora de Sonido</span>
+        </div>
+        <p class="card-desc">Graba audio desde el micrófono y guarda las grabaciones directamente en el almacenamiento del teléfono.</p>
+        <div class="tags">
+          <span class="tag tag-android">Android</span>
+        </div>
+        <div class="links">
+          <a class="btn btn-repo" href="https://github.com/yagoEstudios/grabadoraApp">⌥ Repo</a>
+          <a class="btn btn-apk" href="https://github.com/yagoEstudios/grabadoraApp/releases">⬇ APK</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <span class="card-emoji">📳</span>
+          <span class="card-name">MetroVibra</span>
+        </div>
+        <p class="card-desc">Metrónomo que marca el pulso con vibración del dispositivo. Útil para tocar sin necesidad de escuchar el click.</p>
+        <div class="tags">
+          <span class="tag tag-android">Android</span>
+          <span class="tag tag-music">Música</span>
+        </div>
+        <div class="links">
+          <a class="btn btn-repo" href="https://github.com/yagoEstudios/metroVibrandroid">⌥ Repo</a>
+          <a class="btn btn-apk" href="https://github.com/yagoEstudios/metroVibrandroid/releases">⬇ APK</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WEB -->
+  <section>
+    <p class="section-title">Webs</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-top">
+          <span class="card-emoji">🥁</span>
+          <span class="card-name">Metroclean</span>
+        </div>
+        <p class="card-desc">Metrónomo web limpio y minimalista. Sin distracciones, solo el tempo que necesitas.</p>
+        <div class="tags">
+          <span class="tag tag-web">Web</span>
+          <span class="tag tag-music">Música</span>
+        </div>
+        <div class="links">
+          <a class="btn btn-repo" href="https://github.com/yagoEstudios/metroclean">⌥ Repo</a>
+          <a class="btn btn-web" href="https://yagoestudios.github.io/metroclean/">🌐 Web</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <span class="card-emoji">📡</span>
+          <span class="card-name">Morse Juego</span>
+        </div>
+        <p class="card-desc">Aprende código Morse: incluye baraja Anki con audio y un juego web interactivo para practicar.</p>
+        <div class="tags">
+          <span class="tag tag-web">Web</span>
+          <span class="tag tag-tool">Herramienta</span>
+        </div>
+        <div class="links">
+          <a class="btn btn-repo" href="https://github.com/yagoEstudios/morse-juego">⌥ Repo</a>
+          <a class="btn btn-web" href="https://yagoestudios.github.io/morse-juego/">🌐 Web</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <span class="card-emoji">🔤</span>
+          <span class="card-name">Convert Morse</span>
+        </div>
+        <p class="card-desc">Conversor de texto a código Morse y viceversa. Simple y rápido.</p>
+        <div class="tags">
+          <span class="tag tag-web">Web</span>
+          <span class="tag tag-tool">Herramienta</span>
+        </div>
+        <div class="links">
+          <a class="btn btn-repo" href="https://github.com/yagoEstudios/convert-morse">⌥ Repo</a>
+          <a class="btn btn-web" href="https://yagoestudios.github.io/convert-morse/">🌐 Web</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <span class="card-emoji">🛹</span>
+          <span class="card-name">Random Skate</span>
+        </div>
+        <p class="card-desc">Generador aleatorio de trucos de skate. Para cuando no sabes qué practicar.</p>
+        <div class="tags">
+          <span class="tag tag-web">Web</span>
+        </div>
+        <div class="links">
+          <a class="btn btn-repo" href="https://github.com/yagoEstudios/randomSkate">⌥ Repo</a>
+          <a class="btn btn-web" href="https://yagoestudios.github.io/randomSkate/">🌐 Web</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <span class="card-emoji">🎁</span>
+          <span class="card-name">Regalos</span>
+        </div>
+        <p class="card-desc">Lista de regalos compartible. Fácil de actualizar y consultar.</p>
+        <div class="tags">
+          <span class="tag tag-web">Web</span>
+        </div>
+        <div class="links">
+          <a class="btn btn-repo" href="https://github.com/yagoEstudios/regalos">⌥ Repo</a>
+          <a class="btn btn-web" href="https://yagoestudios.github.io/regalos/">🌐 Web</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <span class="card-emoji">🔗</span>
+          <span class="card-name">Open</span>
+        </div>
+        <p class="card-desc">Abre múltiples webs de golpe con un solo clic. Para abrir tu stack de sitios habitual rápido.</p>
+        <div class="tags">
+          <span class="tag tag-web">Web</span>
+          <span class="tag tag-tool">Herramienta</span>
+        </div>
+        <div class="links">
+          <a class="btn btn-repo" href="https://github.com/yagoEstudios/open">⌥ Repo</a>
+          <a class="btn btn-web" href="https://yagoestudios.github.io/open/">🌐 Web</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section>
+    <p class="section-title">Herramientas y otros</p>
+    <div class="grid">
+
+      <div class="card">
+        <div class="card-top">
+          <span class="card-emoji">🎬</span>
+          <span class="card-name">ytmp3</span>
+        </div>
+        <p class="card-desc">Descargador de YouTube a MP3 hecho por mí. Sin fiar de terceros.</p>
+        <div class="tags">
+          <span class="tag tag-tool">Herramienta</span>
+        </div>
+        <div class="links">
+          <a class="btn btn-repo" href="https://github.com/yagoEstudios/ytmp3">⌥ Repo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <span class="card-emoji">🎼</span>
+          <span class="card-name">Estructuras Música</span>
+        </div>
+        <p class="card-desc">Generador de estructuras musicales con análisis de numeración romana. Referencia para composición.</p>
+        <div class="tags">
+          <span class="tag tag-tool">Herramienta</span>
+          <span class="tag tag-music">Música</span>
+        </div>
+        <div class="links">
+          <a class="btn btn-repo" href="https://github.com/yagoEstudios/estructurasMusica">⌥ Repo</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <span class="card-emoji">🍥</span>
+          <span class="card-name">AnimeFlv Ext</span>
+        </div>
+        <p class="card-desc">Extrae tu lista de animes de AnimeFlv y el capítulo por el que vas.</p>
+        <div class="tags">
+          <span class="tag tag-tool">Herramienta</span>
+        </div>
+        <div class="links">
+          <a class="btn btn-repo" href="https://github.com/yagoEstudios/animeFlvExt">⌥ Repo</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
